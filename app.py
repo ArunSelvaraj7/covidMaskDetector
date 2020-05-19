@@ -27,7 +27,7 @@ global graph,sess
 sess = tf.Session()
 graph = tf.get_default_graph()
 set_session(sess)
-model = load_model(r'C:\Users\ARUN_S\Downloads\face-mask-detector\face-mask-detector\dataset\trained_model.h5', custom_objects={'auc': auc})
+model = load_model(r'model\trained_model.h5', custom_objects={'auc': auc})
 
 
 
@@ -99,6 +99,6 @@ if __name__=='__main__':
     t = threading.Thread(target=video)
     t.daemon = True
     t.start()
-    app.run(debug=True,threaded=True, use_reloader=False)
+    app.run(debug=False,threaded=True, use_reloader=False)
 
 cap.release()
