@@ -11,7 +11,6 @@ from tensorflow.python.keras.backend import set_session
 import numpy as np
 import time
 
-lock=threading.Lock()
 
 
 app = Flask(__name__)
@@ -96,9 +95,6 @@ def video_feed():
 		mimetype = "multipart/x-mixed-replace; boundary=frame")
 
 with app.app_context():
-    t = threading.Thread(target=video)
-    t.daemon = True
-    t.start()
-    app.run(debug=False,threaded=True, use_reloader=False)
+    app.run(debug=False)
 
 cap.release()
