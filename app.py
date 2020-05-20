@@ -3,7 +3,7 @@ from tensorflow.keras.models import load_model
 # import cv2
 import tensorflow as tf
 import threading
-import cvlib as cv
+# import cvlib as cv
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
@@ -94,6 +94,6 @@ def video_feed():
     return Response(video(),
 		mimetype = "multipart/x-mixed-replace; boundary=frame")
 
-app.run(debug=False)
+app.run(debug=True)
 
 cap.release()
