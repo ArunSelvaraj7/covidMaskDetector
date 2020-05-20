@@ -95,7 +95,7 @@ def video_feed():
     return Response(video(),
 		mimetype = "multipart/x-mixed-replace; boundary=frame")
 
-if __name__=='__main__':
+with app.app_context():
     t = threading.Thread(target=video)
     t.daemon = True
     t.start()
