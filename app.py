@@ -94,7 +94,6 @@ def video_feed():
     return Response(video(),
 		mimetype = "multipart/x-mixed-replace; boundary=frame")
 
-with app.app_context():
-    app.run(debug=False)
+app.run(debug=False)
 
 cap.release()
