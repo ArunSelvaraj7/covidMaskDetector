@@ -76,7 +76,7 @@ def video():
             if not flag:
                 continue
             # yield the output frame in the byte format
-            yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + bytearray(encodedImage) + b'\r\n')
+        yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + bytearray(encodedImage) + b'\r\n')
     
 
 @app.route('/mask_detect',methods=['GET','POST'])
