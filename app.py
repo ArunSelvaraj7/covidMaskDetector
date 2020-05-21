@@ -1,15 +1,15 @@
 from flask import Flask,render_template,Response,request,url_for,redirect
-# from tensorflow.keras.models import load_model
-# import cv2
-# import tensorflow as tf
-# import threading
-# import cvlib as cv
-# from tensorflow.keras.preprocessing.image import load_img
-# from tensorflow.keras.preprocessing.image import img_to_array
-# from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
-# from tensorflow.python.keras.backend import set_session
-# import numpy as np
-# import time
+from tensorflow.keras.models import load_model
+import cv2
+import tensorflow as tf
+import threading
+import cvlib as cv
+from tensorflow.keras.preprocessing.image import load_img
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
+from tensorflow.python.keras.backend import set_session
+import numpy as np
+import time
 
 
 
@@ -26,7 +26,7 @@ app = Flask(__name__)
 # sess = tf.Session()
 # graph = tf.get_default_graph()
 # set_session(sess)
-# model = load_model(r'model\trained_model.h5', custom_objects={'auc': auc})
+model = load_model(r'model\trained_model.h5', custom_objects={'auc': auc})
 
 
 
