@@ -9,7 +9,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.python.keras.backend import set_session
 import numpy as np
-import time
+# import time
 
 
 
