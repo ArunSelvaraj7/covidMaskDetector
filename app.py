@@ -97,4 +97,4 @@ def detector():
 if __name__=='__main__':
     app.run(debug=True)
 
-cap.release()
+# cap.release()
