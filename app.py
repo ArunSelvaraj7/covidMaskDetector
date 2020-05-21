@@ -1,6 +1,6 @@
 from flask import Flask,render_template,Response,request,url_for,redirect
 from tensorflow.keras.models import load_model
-# import cv2
+import cv2
 import tensorflow as tf
 import threading
 import cvlib as cv
