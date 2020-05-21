@@ -34,7 +34,7 @@ app = Flask(__name__)
 @app.route('/',methods=['GET','POST'])
 def home():
     if request.method=='POST':
-        cap.open(0)
+        # cap.open(0)
         return redirect(url_for('detector'))
     return render_template('home.html')
 
@@ -79,12 +79,12 @@ def home():
 #             yield(b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + bytearray(encodedImage) + b'\r\n')
     
 
-# @app.route('/mask_detect',methods=['GET','POST'])
-# def detector():
-#     if request.method=='POST':
-#         cap.release()
-#         return redirect(url_for('home'))
-#     return render_template('mask.html')
+@app.route('/mask_detect',methods=['GET','POST'])
+def detector():
+    if request.method=='POST':
+        cap.release()
+        return redirect(url_for('home'))
+    return render_template('mask.html')
 
 # @app.route("/video_feed")
 # def video_feed():
