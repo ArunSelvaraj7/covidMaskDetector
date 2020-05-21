@@ -26,7 +26,7 @@ def auc(y_true, y_pred):
 # sess = tf.Session()
 # graph = tf.get_default_graph()
 # set_session(sess)
-model = load_model(r'model\trained_model.h5', custom_objects={'auc': auc})
+model = load_model(r'model/trained_model.h5', custom_objects={'auc': auc})
 
 
 
