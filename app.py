@@ -15,10 +15,10 @@ import time
 
 app = Flask(__name__)
 
-# def auc(y_true, y_pred):
-#     auc = tf.metrics.auc(y_true, y_pred)[1]
-#     tf.keras.backend.get_session().run(tf.local_variables_initializer())
-#     return auc
+def auc(y_true, y_pred):
+    auc = tf.metrics.auc(y_true, y_pred)[1]
+    tf.keras.backend.get_session().run(tf.local_variables_initializer())
+    return auc
 
 # # load the model, and pass in the custom metric function
 # global graph,sess
