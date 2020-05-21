@@ -21,11 +21,11 @@ def auc(y_true, y_pred):
     return auc
 
 # # load the model, and pass in the custom metric function
-# global graph,sess
+global graph,sess
 
-# sess = tf.Session()
-# graph = tf.get_default_graph()
-# set_session(sess)
+sess = tf.Session()
+graph = tf.get_default_graph()
+set_session(sess)
 model = load_model(r'model/trained_model.h5', custom_objects={'auc': auc})
 
 
@@ -34,12 +34,12 @@ model = load_model(r'model/trained_model.h5', custom_objects={'auc': auc})
 @app.route('/',methods=['GET','POST'])
 def home():
     if request.method=='POST':
-        # cap.open(0)
+        cap.open(0)
         return redirect(url_for('detector'))
     return render_template('home.html')
 
-# cap=cv2.VideoCapture(0)
-# time.sleep(2.0)
+cap=cv2.VideoCapture(0)
+time.sleep(2.0)
 
 # def video():
     
@@ -82,7 +82,7 @@ def home():
 @app.route('/mask_detect',methods=['GET','POST'])
 def detector():
     if request.method=='POST':
-        # cap.release()
+        cap.release()
         return redirect(url_for('home'))
     return render_template('mask.html')
 
@@ -97,4 +97,4 @@ def detector():
 if __name__=='__main__':
     app.run(debug=True)
 
-# cap.release()
+cap.release()
