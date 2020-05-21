@@ -82,7 +82,7 @@ def home():
 @app.route('/mask_detect',methods=['GET','POST'])
 def detector():
     if request.method=='POST':
-        cap.release()
+        # cap.release()
         return redirect(url_for('home'))
     return render_template('mask.html')
 
