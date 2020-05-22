@@ -29,7 +29,7 @@ set_session(sess)
 model = load_model(r'model/trained_model.h5', custom_objects={'auc': auc})
 
 
-camera='http://27.5.249.33:'str($PORT)+'/1'
+camera='http://27.5.249.33:'+str($PORT)+'/1'
 
 @app.route('/',methods=['GET','POST'])
 def home():
