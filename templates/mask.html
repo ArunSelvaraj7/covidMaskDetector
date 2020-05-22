@@ -1,29 +1,25 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Pi Video Surveillance</title>
-    <!-- <script src="JS/webcam.js"></script> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Covid Mask Detector</title>
 
 </head>
 
-<body>
-    <!-- <div id="my_camera" style="width:320px; height:240px;"></div>
-    <div id="my_result"></div>
-    <script language="JavaScript">
-    Webcam.attach( '#my_camera' );
-    
-    function take_snapshot() {
-        Webcam.snap( function(data_uri) {
-            document.getElementById('my_result').innerHTML = '<img src="'+data_uri+'"/>';
-        } );
-    }
-</script>
-<a href="javascript:void(take_snapshot())">Take Snapshot</a> -->
-    <h1>Mask Detector</h1>
-    <img src="{{ url_for('video_feed') }}">
-    <form action="{{url_for('detector')}}" method="POST">
+<body style="height: 100%;margin: 0; padding: 0;width:100%">
+
+    <h1 style="text-align:center; font-family: Sansita, serif">Covid Mask Detector</h1>
+    <div>
+    <form style="text-align:center" action="{{url_for('detector')}}" method="POST">
         <button class='btn btn-primary' type="submit"> Stop </button>
     </form>
+    </div>
+    <div style="margin-left:auto;margin-right:auto;width:50vw;margin-top:40px">
+    <img style="border: 10px solid brown;border-radius: 50px 20px;" src="{{ url_for('video_feed') }}">
+    </div>
 </body>
 
 </html>

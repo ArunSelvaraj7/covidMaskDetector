@@ -1,12 +1,17 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Pi Video Surveillance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Covid Mask Detector</title>
 </head>
 
-<body>
-    <h1>Mask Detector</h1>
-    <form action="{{ url_for('home') }}" method="POST">
+<body style="height: 100%;margin: 0; padding: 0;with:100%">
+    <h1 style="text-align:center; font-family: Sansita, serif">Covid Mask Detector</h1>
+    <form style="text-align:center" action="{{ url_for('home') }}" method="POST">
         <button class='btn btn-primary' type="submit"> Start </button>
     </form>
 

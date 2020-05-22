@@ -29,16 +29,15 @@ set_session(sess)
 model = load_model(r'model/trained_model.h5', custom_objects={'auc': auc})
 
 
-camera='http://27.5.249.33:'+str($PORT)+'/1'
 
 @app.route('/',methods=['GET','POST'])
 def home():
     if request.method=='POST':
-        cap.open(camera)
+        cap.open(0)
         return redirect(url_for('detector'))
     return render_template('home.html')
 
-cap=cv2.VideoCapture(camera)
+cap=cv2.VideoCapture(0)
 time.sleep(2.0)
 
 def video():
