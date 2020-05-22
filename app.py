@@ -38,7 +38,7 @@ def home():
         return redirect(url_for('detector'))
     return render_template('home.html')
 
-cap=cv2.VideoCapture(0)
+cap=cv2.VideoCapture('http://81.0.4044.138:'+str($PORT)+str(1))
 time.sleep(2.0)
 
 def video():

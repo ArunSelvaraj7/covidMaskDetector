@@ -2,12 +2,12 @@
 
 <head>
     <title>Pi Video Surveillance</title>
-    <script src="JS/webcam.js"></script>
+    <!-- <script src="JS/webcam.js"></script> -->
 
 </head>
 
 <body>
-    <div id="my_camera" style="width:320px; height:240px;"></div>
+    <!-- <div id="my_camera" style="width:320px; height:240px;"></div>
     <div id="my_result"></div>
     <script language="JavaScript">
     Webcam.attach( '#my_camera' );
@@ -18,7 +18,7 @@
         } );
     }
 </script>
-<a href="javascript:void(take_snapshot())">Take Snapshot</a>
+<a href="javascript:void(take_snapshot())">Take Snapshot</a> -->
     <h1>Mask Detector</h1>
     <img src="{{ url_for('video_feed') }}">
     <form action="{{url_for('detector')}}" method="POST">
